@@ -1,0 +1,4 @@
+asset_type,class,rating_label,subordination,base_wal_years,stress_wal_years,base_loss_fraction,stress_loss_fraction
+CLO,D,BBB,0.14,7.03928351091,,0,1
+ABS,D,BBB,0.08,1.95209166782,0.293003025277,0,0.86541803208
+CMBS,D,BBB,0.08,9.65270763858,,0,1

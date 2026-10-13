@@ -16,7 +16,31 @@ class WaterfallState:
 
     @classmethod
     def initial(cls, structure: CLOStructure) -> "WaterfallState":
-        return cls(np.array([x.notional for x in structure.tranches], dtype=float), np.zeros(5), np.zeros(3))
+        return cls(np.array([x.notional for x in structure.tranches], dtype=float),
+                   np.zeros(len(structure.tranches)), np.zeros(3))
+
+
+def pay_principal(balances: np.ndarray, amount: float,
+                  sequential: bool = True) -> np.ndarray:
+    """Reduce live debt in seniority order or in proportion to live balances."""
+    if not math.isfinite(amount) or amount < 0 or not np.isfinite(balances).all() or (balances < 0).any():
+        raise ValueError("Principal and balances must be finite and nonnegative")
+    paid = np.zeros_like(balances)
+    remaining = amount if sequential else min(amount, float(balances.sum()))
+    if sequential:
+        for index in range(len(balances)):
+            paid[index] = min(remaining, balances[index])
+            remaining -= paid[index]
+    elif balances.sum() > 0:
+        paid = balances * (remaining / float(balances.sum()))
+    balances -= paid
+    np.maximum(balances, 0, out=balances)
+    return paid
+
+
+def allocate_losses(balances: np.ndarray, amount: float) -> np.ndarray:
+    """Write off principal bottom-up. Losses are noncash, never payments."""
+    return pay_principal(balances[::-1], amount)[::-1]
 
 
 @dataclass(frozen=True)
@@ -89,12 +113,12 @@ def allocate_period(structure: CLOStructure, state: WaterfallState,
         return from_interest + from_principal
 
     def principal_sequence(amount: float) -> float:
+        payments = pay_principal(state.balances, amount)
+        paid_principal[:] += payments
+        # Preserve the CLO's sequential subtraction order at currency precision.
         remaining = amount
-        for index in range(5):
-            payment = min(remaining, state.balances[index])
-            state.balances[index] -= payment
-            paid_principal[index] += payment
-            remaining -= payment
+        for payment in payments:
+            remaining -= float(payment)
         return amount - remaining
 
     for index in range(3):

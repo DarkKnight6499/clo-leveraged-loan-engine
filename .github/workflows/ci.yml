@@ -15,3 +15,4 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - run: python examples/loan_mechanics.py
       - run: python examples/run_analysis.py
+      - run: python examples/run_structured_credit.py

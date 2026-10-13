@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "clo-leveraged-loan-engine"
 version = "0.1.0"
-description = "Synthetic leveraged loan cash flows and an illustrative CLO waterfall"
+description = "Synthetic structured credit cash flows and illustrative CLO, ABS and CMBS waterfalls"
 readme = "README.md"
 requires-python = ">=3.11"
 authors = []
