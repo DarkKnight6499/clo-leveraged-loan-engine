@@ -1,0 +1,82 @@
+{
+  "data_type": "synthetic",
+  "structure": {
+    "tranches": [
+      {
+        "name": "A",
+        "rating": "AAA",
+        "notional": 315000000.0,
+        "spread": 0.015,
+        "oc_trigger": 1.25,
+        "ic_trigger": 1.2
+      },
+      {
+        "name": "B",
+        "rating": "AA",
+        "notional": 55000000.0,
+        "spread": 0.021,
+        "oc_trigger": 1.25,
+        "ic_trigger": 1.2
+      },
+      {
+        "name": "C",
+        "rating": "A",
+        "notional": 35000000.0,
+        "spread": 0.028,
+        "oc_trigger": 1.16,
+        "ic_trigger": 1.1
+      },
+      {
+        "name": "D",
+        "rating": "BBB",
+        "notional": 25000000.0,
+        "spread": 0.04,
+        "oc_trigger": 1.1,
+        "ic_trigger": 1.05
+      },
+      {
+        "name": "E",
+        "rating": "BB",
+        "notional": 20000000.0,
+        "spread": 0.065,
+        "oc_trigger": 1.04,
+        "ic_trigger": 1.0
+      }
+    ],
+    "equity": 47540494.45633209,
+    "reinvestment_years": 4.0,
+    "horizon_years": 10.0,
+    "senior_fee": 0.001,
+    "subordinated_fee": 0.004,
+    "admin_expense": 200000,
+    "admin_cap": 250000,
+    "annual_tax": 0.0,
+    "ccc_limit": 0.075,
+    "diversion_trigger": 1.08,
+    "diversion_fraction": 0.5,
+    "default_oc_trigger": 1.0,
+    "reinvestment_price": 0.9975,
+    "reinvestment_spread": 0.036,
+    "reinvestment_maturity": 5.0,
+    "closing_date": "2026-01-01"
+  },
+  "default_probabilities_stylized_unverified": {
+    "B1": 0.0075,
+    "B2": 0.0125,
+    "B3": 0.025,
+    "Caa1": 0.06,
+    "Caa2": 0.12,
+    "Caa3": 0.2
+  },
+  "rating_factors_verified": {
+    "B1": 2220,
+    "B2": 2720,
+    "B3": 3490,
+    "Caa1": 4770,
+    "Caa2": 6500,
+    "Caa3": 8070
+  },
+  "baseline_recovery_concentration": 20.0,
+  "annual_prepayment": 0.1,
+  "baseline_latent_correlation": 0.2
+}

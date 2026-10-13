@@ -1,0 +1,16 @@
+annual_cdr,recovery,equity_irr,equity_multiple,cash_reconciliation_max,A_principal_loss,A_oc_breach,A_ic_breach,B_principal_loss,B_oc_breach,B_ic_breach,C_principal_loss,C_oc_breach,C_ic_breach,D_principal_loss,D_oc_breach,D_ic_breach,E_principal_loss,E_oc_breach,E_ic_breach
+0,0.3,0.1394995643,2.049227731,7.450580597e-09,0,False,False,0,False,False,0,False,False,0,False,False,0,False,False
+0.02,0.3,-0.0241593531,0.8964739838,7.450580597e-09,0,False,False,0,False,False,0,False,False,0,True,False,0,False,True
+0.05,0.3,-0.8121830279,0.1904964391,7.450580597e-09,0,True,False,0,True,False,0,True,False,0,True,False,0.6538755517,True,True
+0.1,0.3,-0.985748147,0.08955200668,7.450580597e-09,0,True,True,0.04018282122,True,True,1,True,True,1,True,True,1,True,True
+0.2,0.3,-0.9999994267,0.02751676814,3.725290298e-09,0.3893597154,True,True,1,True,True,1,True,True,1,True,True,1,True,True
+0,0.5,0.1394995643,2.049227731,7.450580597e-09,0,False,False,0,False,False,0,False,False,0,False,False,0,False,False
+0.02,0.5,0.0393131467,1.211027205,7.450580597e-09,0,False,False,0,False,False,0,False,False,0,False,False,0,False,False
+0.05,0.5,-0.6222122679,0.2712977387,7.450580597e-09,0,False,False,0,False,False,0,True,False,0,True,False,0,True,True
+0.1,0.5,-0.9490543823,0.119003063,3.725290298e-09,0,True,False,0,True,False,0,True,True,0.883746122,True,True,1,True,True
+0.2,0.5,-0.9992146426,0.05093456938,3.725290298e-09,0.117768381,True,True,1,True,True,1,True,True,1,True,True,1,True,True
+0,0.7,0.1394995643,2.049227731,7.450580597e-09,0,False,False,0,False,False,0,False,False,0,False,False,0,False,False
+0.02,0.7,0.08459609944,1.537853409,7.450580597e-09,0,False,False,0,False,False,0,False,False,0,False,False,0,False,False
+0.05,0.7,-0.0517180457,0.787076616,7.450580597e-09,0,False,False,0,False,False,0,False,False,0,True,False,0,False,True
+0.1,0.7,-0.7523724766,0.2059673174,3.725290298e-09,0,False,False,0,False,False,0,True,False,0,True,False,0.3406110696,True,True
+0.2,0.7,-0.989014404,0.07560384157,7.450580597e-09,0,True,False,0,True,False,0.6223935661,True,True,1,True,True,1,True,True

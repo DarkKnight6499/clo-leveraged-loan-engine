@@ -1,0 +1,5 @@
+metric,actual,limit,passes
+largest_obligor,0.01831102179,0.02,True
+largest_industry,0.05344864993,0.1,True
+second_lien,0.04877592096,0.1,True
+cov_lite,0.8199093217,0.9,True
